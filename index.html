@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Test AutoLogin Form</title>
+</head>
+<body>
+  <h1>Тестова форма Driver Practical Test</h1>
+  <form id="loginForm" action="#" method="post">
+    <label for="licenceNumber">Driver’s licence number</label><br />
+    <input id="licenceNumber" name="licenceNumber" type="text" placeholder="Введіть licenceNumber" />
+
+    <br /><br />
+    <label for="applicationNumber">Application reference number</label><br />
+    <input id="applicationNumber" name="applicationNumber" type="text" placeholder="Введіть applicationNumber" />
+
+    <br /><br />
+    <button type="submit" id="continueButton">Continue</button>
+  </form>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Вам вдалося авторизуватися:\nlicenseNumber = " +
+            document.getElementById("licenceNumber").value +
+            "\napplicationNumber = " +
+            document.getElementById("applicationNumber").value);
+    });
+  </script>
+</body>
+</html>
